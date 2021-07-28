@@ -1,3 +1,4 @@
+//NOTE: ts can infer type 
 const profile = {
   name: 'alex',
   age: 20,
@@ -10,6 +11,7 @@ const profile = {
   }
 };
 
+//NOTE: nested destructuring ts
 const { age, name }: { age: number; name: string } = profile;
 const {
   coords: { lat, lng }

@@ -1,3 +1,6 @@
+//NOTE: interface is to create a custom type 
+//NOTE: captical case
+//NOTE: to check example if an object satisfy an interface, as long as this object contains summary function, then it's fine, and it can contains additional more properties
 interface Reportable {
   summary(): string;
 }
@@ -20,6 +23,7 @@ const drink = {
   }
 };
 
+//NOTE: we should try to create function typed with interfaces
 const printSummary = (item: Reportable): void => {
   console.log(item.summary());
 };

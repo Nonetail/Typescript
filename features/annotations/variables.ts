@@ -24,7 +24,7 @@ let point: { x: number; y: number } = {
   y: 20
 };
 
-//NOTE: type annotation here is for logNumber const !
+//NOTE: type annotation here is for logNumber const ! but since ts can infer, we don't need to do the logNumber: (i: number) => void
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
