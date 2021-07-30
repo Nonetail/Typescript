@@ -1,5 +1,5 @@
 //NOTE: type inference for function only works with the return value, not the arguments
-//NOTE: we should explicitly set return value type
+//NOTE: we should explicitly set return value type !!!
 const add = (a: number, b: number) => {
   return a + b;
 };
@@ -12,7 +12,7 @@ function divide(a: number, b: number): number {
   return a / b;
 }
 
-const multiply = function(a: number, b: number): number {
+const multiply = function (a: number, b: number): number {
   return a * b;
 };
 
@@ -24,7 +24,7 @@ const logger = (message: string): void => {
 //NOTE: rare case when throw will stop execution, which means this function will `never`  return;
 const throwError = (message: string): never => {
   // if (!message) {
-    throw new Error(message);
+  throw new Error(message);
   // }
 };
 

@@ -6,14 +6,14 @@ const initEmpty: string[] = [];
 //NOTE: ts arrays inside array
 const carsByMake: string[][] = [];
 
-// Help with inference when extracting values
+//NOTE: Help with inference when extracting values
 const car = carMakers[0];
 const myCar = carMakers.pop();
 
 // Prevent incompatible values
 carMakers.push(100);
 
-// Help with 'map'
+//NOTE: Help with 'map'
 carMakers.map(
   //NOTE: anonymos function here return string type, and argument type string
   (car: string): string => {

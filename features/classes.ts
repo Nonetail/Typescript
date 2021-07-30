@@ -1,10 +1,10 @@
 class Vehicle {
-  constructor(public color: string) {}
+  constructor(public color: string) { }
   //NOTE: GOOGLE: public modifier here applyed on properties is a short hand for code bottom
   //NOTE: proteced and private work on properties as well
   // color: string;
   // constructor(color: string) {
-    // this.color = color;
+  // this.color = color;
   // }
 
 
@@ -19,14 +19,14 @@ const vehicle = new Vehicle('orange');
 console.log(vehicle.color);
 
 class Car extends Vehicle {
-  //GOOGLE: check js class extends
+  //GOOGLE: check js class extends and constructor
   //NOTE: we don't use `public` on color here since we don't wanna create a new instance of color, but to use prarent one
   constructor(public wheels: number, color: string) {
     super(color);
   }
 
   //NOTE: private can only be called within this class 
-  //NOTE: we can not overriding modifiers
+  //NOTE: the modifier in child and parent should be consistant
   //NOTE: private does not add in any security
   private drive(): void {
     console.log('vroom');
