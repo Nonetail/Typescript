@@ -9,7 +9,10 @@ export interface Mappable {
   color: string;
 }
 
+
+//NOTE: add a new CustomMap class and only expose part of google map api functionality, which can be safe since other devs won't be able to access to everything from google map and accidentaly break anything
 export class CustomMap {
+  //NOTE: in ts, we can use created class as function construtor to create instances, can also use it to refer to an class type
   private googleMap: google.maps.Map;
 
   constructor(divId: string) {
@@ -22,6 +25,9 @@ export class CustomMap {
     });
   }
 
+  //NOTE: addMarker(mappable: User | Company): void { user or company here will 
+  //NOTE: TypeScript will only allow you to do things with the union if that thing is valid for every member of the union. 
+  //NOTE: GOOGLE: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
   addMarker(mappable: Mappable): void {
     const marker = new google.maps.Marker({
       map: this.googleMap,
