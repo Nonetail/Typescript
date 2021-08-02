@@ -5,6 +5,7 @@ export class NumbersCollection extends Sorter {
     super();
   }
 
+  //NOTE: use a getter here since usually we access length by property instead of function
   get length(): number {
     return this.data.length;
   }

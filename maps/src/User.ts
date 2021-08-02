@@ -4,6 +4,7 @@ import faker from 'faker';
 import { Mappable } from './CustomMap';
 
 //NOTE: convention in the ts world that it is not good to use default export
+//NOTE: implements keyword indicate that user instance created by User should satisfy Mappable interface! but it is not mandatory here
 export class User implements Mappable {
   name: string;
   location: {

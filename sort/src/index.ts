@@ -19,3 +19,5 @@ linkedList.add(4);
 
 linkedList.sort();
 linkedList.print();
+
+//NOTE: concurrently library in package.json can run multiple commandes at the same time

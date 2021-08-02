@@ -10,12 +10,14 @@ export class CharactersCollection extends Sorter {
   }
 
   compare(leftIndex: number, rightIndex: number): boolean {
-    return (
+    return (    
+      //NOTE: string comparison
       this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase()
     );
   }
 
   swap(leftIndex: number, rightIndex: number): void {
+    //NOTE: simple string swap
     const characters = this.data.split('');
 
     const leftHand = characters[leftIndex];
